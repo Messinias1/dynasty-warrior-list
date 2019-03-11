@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Timmana');
+        @import url('https://fonts.googleapis.com/css?family=Shojumaru');
+        @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+        #body {
+            background-size: cover;
+        }
+
+        .div {
+            padding: 50px;
+            margin: 10px 50px 10px 100px;
+            float: left;
+        }
+
+        #title1 {
+            color: purple;
+            font-family: 'Libre Baskerville', serif;
+            font-size: 120px;
+            text-align: center;
+        }
+
+        #subTitle {
+            color: gold;
+            font-family: 'Timmana', sans-serif;
+            font-size: 70px;
+            text-align: center;
+        }
+
+        #shuTitle {
+            color: green;
+            font-family: 'Shojumaru', cursive;
+            font-size: 75px;
+        }
+
+        #weiTitle {
+            color: blue;
+            font-family: 'Shojumaru', cursive;
+            font-size: 75px;
+        }
+
+        #wuTitle {
+            color: red;
+            font-family: 'Shojumaru', cursive;
+            font-size: 75px;
+        }
+
+        #otherTitle {
+            color: silver;
+            font-family: 'Shojumaru', cursive;
+            font-size: 75px;
+            text-align: center;
+        }
+        
+        .p {
+            color: purple;
+            font-family: 'Libre Baskerville', serif;
+        }
+    </style>
+</head>
+
+<body id="body" background="https://techraptor.net/wp-content/uploads/2018/02/dynasty-warriors-9-header-902x507.jpg">
+    <div>
+        <h1 id="title1">Dynasty Warriors</h1>
+        <h3 id="subTitle">The Kingdoms</h3>
+    </div>
+
+    <div class="div">
+        <h1 id="shuTitle">Shu</h1>
+        <p id="shuStats" class="p"></p>
+    </div>
+
+    <div class="div">
+        <h1 id="weiTitle">Wei</h1>
+        <p id="weiStats" class="p"></p>
+    </div>
+
+    <div class="div">
+        <h1 id="wuTitle">Wu</h1>
+        <p id="wuStats" class="p"></p>
+    </div>
+
+    <div class="div">
+        <h1 id="otherTitle">Other</h1>
+        <p id="otherStats" class="p"></p>
+    </div>
+    
+    <script type="text/javascript">
+        
+        var dynastyWarriors = {
+            names: [["Liu Bei", "Zhang Fei", "Guan Yu", "Zhuge Liang", "Ma Chao", "Zhao Yun"], ["Cao Cao", "Xiahou Dun", "Dian Wei", "Cao Ren", "Zhang Liao", "Xu Zhu",], ["Sun Jian", "Sun Quan", "Sun Ce", "Taishi Ci", "Zhou Tai", "Zhou Yu"], ["Lu Bu", "Yuan Shao", "Dong Zhuo", "Zhang Jiao", "Meng Huo", "Zhu Rong"]],
+            leadership: [[75, 83, 93, 92, 91, 88], [99, 90, 68, 86, 94, 66], [96, 73, 95, 79, 81, 98], [94, 80, 69, 92, 75, 68]],
+            war: [[74, 98, 97, 33, 97, 96], [72, 92, 93, 88, 90, 96], [91, 67, 92, 92, 93, 71], [100, 68, 83, 26, 82, 85]],
+            intelligence: [[73, 35, 77, 100, 46, 78], [92, 64, 31, 62, 83, 39], [77, 83, 75, 62, 48, 97], [25, 75, 66, 87, 40, 32]],
+            politics: [[78, 22, 64, 98, 44, 72], [96, 76, 29, 49, 72, 23], [78, 89, 72, 56, 33, 91], [16, 77, 19, 82, 39, 30]],
+            
+            displayShuNames: function() {
+                for (var i = 0; i < this.names.length; i++) {
+                    for (var j = 0; j < this.names[0].length; j++) {
+                        var shuNames = this.names[0] + ": \n";
+                    }
+                }
+                return shuNames;
+            }
+        };
+        document.getElementById("shuStats").innerText = dynastyWarriors.displayShuNames();
+    </script>
+</body>
+
+</html>

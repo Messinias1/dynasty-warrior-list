@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <style>
+        #company {
+            color: red;
+        }
+
+        #middle {
+            color: blue;
+        }
+
+        #top,
+        #middle,
+        #bottom {
+            border: 1px solid lightgrey;
+            width: 500px;
+            /* top right bottom left ( around the clock)*/
+            margin: 10px 50px 10px 100px;
+            border-radius: 5px;
+            padding: 10px 20px 10px 20px;
+            box-shadow: 0px 4px 8px 0px lightgrey;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="top">
+        <h1 id="company">Company Corp.</h1>
+        <h3>We Mean Business!</h3>
+    </div>
+
+    <div id="middle">
+        <h5>Department Salary Totals</h5>
+        <h5>February, 2019</h5>
+        <p>Accurate salary reporting guarunteed! Or your money back!</p>
+    </div>
+
+    <div id="bottom">
+        <h3>Department Totals</h3>
+        <div id="grandTotalResults"></div>
+    </div>
+    
+    <script>
+        var salarydept = {
+            departmentNames: ['Marketing', 'Software Development', 'Management'],
+            departmentTotals: [5432123, 7654321, 9876543],
+
+            calculateTotals: function() {
+                var grandTotal = 0;
+                for (var i = 0; i < this.departmentNames.length; i++) {
+                    grandTotal += this.departmentTotals[i];
+                }
+                return grandTotal;
+            }
+        };
+        document.getElementById("grandTotalResults").innerText = salarydept.calculateTotals();
+    </script>
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .phop {
+            color: red;
+            font-style: italic;
+        }
+        
+        .slogan {
+            font-style: italic;
+        }
+
+        #div1 {
+            width: 500px;
+            border: 5px solid gold;
+            padding: 25px;
+            margin: 15px;
+            box-shadow: 0 12px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 9px;
+        }
+
+        #div2 {
+            background-color: gold;
+            width: 500px;
+            border: 5px solid red;
+            padding: 5px 25px 40px 25px;
+            margin: 15px;
+            box-shadow: 0 12px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 9px;
+        }
+        
+        .report {
+            font-size: 12px;
+            width: 25%;
+            float: left;
+        }
+        
+        #body {
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body id="body" background="https://www.fleetwaytravel.com/uploads/cover/_1200x630_crop_center-center_80/Holidays-To-Greece.jpg">
+
+    <div id="div1">
+        <h1 class="phop">Pawtucket House of Pizza</h1>
+        <h2 class="slogan">Fantastic!</h2>
+        <h3>398 Smithfield Avenue, Pawtucket R.I.</h3>
+        <h3>(401) 727-1680 -- (401) 728-7330</h3>
+    </div>
+
+    <div id="div2">
+        <h1 id="trText">Totals Report</h1>
+        <h3>
+            <p class="report" id="empNames"></p>
+            <p class="report" id="payByHour"></p>
+            <p class="report" id="hours"></p>
+        </h3>
+        <h3 id="totalsText">Total Salaries</h3>
+        <h2 id="totalWeeklyPayroll"></h2>
+    </div>
+
+    <script type="text/javascript">
+        var payRep = {
+            employeeNames: ["Mike", "Ray", "Fernie", "Denise", "Big Shawn", "Little Shawn", "John"],
+            payByHourTotals: [20, 17, 12.5, 8, 11.5, 11, 13],
+            hoursWorked: [40, 40, 40, 40, 32, 32, 36],
+
+            displayNames: function() {
+                var empNames = [];
+                for (var i = 0; i < this.employeeNames.length; i++) {
+                    empNames += this.employeeNames[i] + ': \n';
+                }
+                return empNames;
+            },
+
+            hourlyPay: function() {
+                var payByHour = [];
+                for (var i = 0; i < this.payByHourTotals.length; i++) {
+                    payByHour += '$' + this.payByHourTotals[i] + '\n';
+                }
+                return payByHour;
+            },
+
+            displayHoursWorked: function() {
+                var hours = [];
+                for (var i = 0; i < this.hoursWorked.length; i++) {
+                    hours += this.hoursWorked[i] + '\n';
+                }
+                return hours;
+            },
+
+            createReport: function() {
+                var grandTotal = 0;
+                for (var i = 0; i < this.employeeNames.length; i++) {
+                    grandTotal += this.payByHourTotals[i] * this.hoursWorked[i];
+                }
+                return grandTotal;
+            }
+
+        };
+        document.getElementById('empNames').innerText = payRep.displayNames();
+        document.getElementById('payByHour').innerText = payRep.hourlyPay();
+        document.getElementById("hours").innerText = payRep.displayHoursWorked();
+        document.getElementById("totalWeeklyPayroll").innerHTML = payRep.createReport();
+    </script>
+</body>
+
+</html>

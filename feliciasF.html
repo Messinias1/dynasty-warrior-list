@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        #title {
+            color: blue;
+        }
+
+        #slogan {
+            color: green;
+        }
+
+        .style1 {
+            font-style: italic;
+        }
+
+        div {
+            width: 300px;
+            border: 5px solid green;
+            padding: 25px;
+            margin: 25px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 9px;
+            float: left;
+            /* 5px rounded corners */
+        }
+        
+        #trText {
+            text-align: center;
+        }
+        
+        .report {
+            font-size: 12px;
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+        
+        #totalsText {
+            text-align: center;
+        }
+        
+        #salesReportInner {
+            color: blue;
+            text-align: center;
+        }
+
+        span {
+            float: left;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    
+    <div>
+        <h1>Mega Corp</h1>
+        <h5 id="title" class="style1">Department Totals Report</h5>
+    </div>
+
+    <div>
+        <h5 id="slogan" class="style1">ABC, Always Be Coding!</h5>
+        <p id="sentence">CareeDevs is Life, and Life is CareerDevs</p>
+        <span>Age: </span>
+        <p id="age">24</p>
+    </div>
+    
+    <div>
+        <h1 id="trText">Totals Report</h1>
+        <h3>
+            <p class="report" id="deptNames"></p>
+            <p class="report" id="deptSalaries"></p>
+        </h3>
+        <h3 id="totalsText">Total Salaries</h3>
+        <h2 id="salesReportInner"></h2>
+    </div>
+    
+    <script type="text/javascript">
+        var salaryobj = {
+            departmentNames: ["Marketing", "Financing", "Human Resources", "Production", "Development", "Quality Management", "Sales", "Research", "Customer Service"],
+            deptSalariesTotals: [99651, 0, 172627, 249057, 305082, 174733, 150462, 138102, 0],
+
+            displayNames: function() {
+                var deptNames = [];
+                for (var i = 0; i < this.departmentNames.length; i++) {
+                    deptNames += this.departmentNames[i] + ': \n';
+                }
+                return deptNames;
+            },
+
+            displaySalaries: function() {
+                var deptSalaries = [];
+                for (var i = 0; i < this.deptSalariesTotals.length; i++) {
+                    deptSalaries += this.deptSalariesTotals[i] + '\n';
+                }
+                return deptSalaries;
+            },
+
+            createReport: function() {
+                var grandTotal = 0;
+                for (var i = 0; i < this.departmentNames.length; i++) {
+                    grandTotal += this.deptSalariesTotals[i];
+                }
+                return grandTotal;
+            }
+
+        };
+        document.getElementById('deptNames').innerText = salaryobj.displayNames();
+        document.getElementById('deptSalaries').innerText = salaryobj.displaySalaries();
+        document.getElementById("salesReportInner").innerHTML = salaryobj.createReport();
+    </script>
+
+</body>
+
+</html>
