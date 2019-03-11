@@ -12,6 +12,9 @@
         }
 
         .div {
+            width: 500px;
+            height: 300px;
+            border: 5px black;
             padding: 50px;
             margin: 10px 50px 10px 100px;
             float: left;
@@ -55,7 +58,23 @@
             font-size: 75px;
             text-align: center;
         }
-        
+
+        #shuStats {
+            text-align: center;
+        }
+
+        #weiStats {
+            text-align: center;
+        }
+
+        #wuStats {
+            text-align: center;
+        }
+
+        #otherStats {
+            text-align: center;
+        }
+
         .p {
             color: purple;
             font-family: 'Libre Baskerville', serif;
@@ -88,26 +107,83 @@
         <h1 id="otherTitle">Other</h1>
         <p id="otherStats" class="p"></p>
     </div>
-    
+
     <script type="text/javascript">
-        
+        var fs = require('fs');
+
         var dynastyWarriors = {
-            names: [["Liu Bei", "Zhang Fei", "Guan Yu", "Zhuge Liang", "Ma Chao", "Zhao Yun"], ["Cao Cao", "Xiahou Dun", "Dian Wei", "Cao Ren", "Zhang Liao", "Xu Zhu",], ["Sun Jian", "Sun Quan", "Sun Ce", "Taishi Ci", "Zhou Tai", "Zhou Yu"], ["Lu Bu", "Yuan Shao", "Dong Zhuo", "Zhang Jiao", "Meng Huo", "Zhu Rong"]],
-            leadership: [[75, 83, 93, 92, 91, 88], [99, 90, 68, 86, 94, 66], [96, 73, 95, 79, 81, 98], [94, 80, 69, 92, 75, 68]],
-            war: [[74, 98, 97, 33, 97, 96], [72, 92, 93, 88, 90, 96], [91, 67, 92, 92, 93, 71], [100, 68, 83, 26, 82, 85]],
-            intelligence: [[73, 35, 77, 100, 46, 78], [92, 64, 31, 62, 83, 39], [77, 83, 75, 62, 48, 97], [25, 75, 66, 87, 40, 32]],
-            politics: [[78, 22, 64, 98, 44, 72], [96, 76, 29, 49, 72, 23], [78, 89, 72, 56, 33, 91], [16, 77, 19, 82, 39, 30]],
-            
-            displayShuNames: function() {
-                for (var i = 0; i < this.names.length; i++) {
-                    for (var j = 0; j < this.names[0].length; j++) {
-                        var shuNames = this.names[0] + ": \n";
+            shuData: [],
+            weiData: [],
+            wuData: [],
+            otherData: [],
+
+            displayShuStats: function() {
+                var contents = fs.readFileSync('ROTK.txt', 'utf8');
+                var warriorsArray = contents.split('\n');
+                this.shuData.push(warriorsArray[0].slice(0, 44));
+                this.shuData.push('--------------------------------------------');
+                
+                for (var i = 0; i < warriorsArray.length; i++) {
+                    if (warriorsArray[i].slice(45, 48) == 'Shu') {
+                        this.shuData.push(warriorsArray[i].slice(0, 44));
                     }
+
                 }
-                return shuNames;
-            }
+                return this.shuData;
+            },
+
+            displayWeiStats: function() {
+                var contents = fs.readFileSync('ROTK.txt', 'utf8');
+                var warriorsArray = contents.split('\n');
+                this.weiData.push(warriorsArray[0].slice(0, 44));
+                this.weiData.push('--------------------------------------------');
+
+                for (var i = 0; i < warriorsArray.length; i++) {
+                    if (warriorsArray[i].slice(45, 48) == 'Wei') {
+                        this.weiData.push(warriorsArray[i].slice(0, 44));
+                    }
+
+                }
+                return this.weiData;
+            },
+
+            displayWuStats: function() {
+                var contents = fs.readFileSync('ROTK.txt', 'utf8');
+                var warriorsArray = contents.split('\n');
+                this.wuData.push(warriorsArray[0].slice(0, 44));
+                this.wuData.push('--------------------------------------------');
+
+                for (var i = 0; i < warriorsArray.length; i++) {
+                    if (warriorsArray[i].slice(45, 47) == 'Wu') {
+                        this.wuData.push(warriorsArray[i].slice(0, 44));
+                    }
+
+                }
+                return this.wuData;
+            },
+
+            displayOtherStats: function() {
+                var contents = fs.readFileSync('ROTK.txt', 'utf8');
+                var warriorsArray = contents.split('\n');
+                this.otherData.push(warriorsArray[0].slice(0, 44));
+                this.otherData.push('--------------------------------------------');
+
+                for (var i = 0; i < warriorsArray.length; i++) {
+                    if (warriorsArray[i].slice(45, 50) == 'Other') {
+                        this.otherData.push(warriorsArray[i].slice(0, 44));
+                    }
+
+                }
+                return this.otherData;
+            },
+            
+            
         };
-        document.getElementById("shuStats").innerText = dynastyWarriors.displayShuNames();
+        dynastyWarriors.displayShuStats();
+        dynastyWarriors.displayWeiStats();
+        dynastyWarriors.displayWuStats();
+        dynastyWarriors.displayOtherStats();
+        //document.getElementById("shuStats").innerText = dynastyWarriors.displayShuStats();
     </script>
 </body>
 

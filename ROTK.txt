@@ -17,14 +17,14 @@ Cai Mao                 75    67    76    77
 Cai Zhong               45    53     3    24
 Cao Ang                 72    60    65    73
 Cao Bao                 61    73    35    28
-Cao Cao                 99    72    92    96
+Cao Cao                 99    72    92    96 Wei
 Cao Chong               50    25    91    84
 Cao Chun                71    69    59    49
 Cao Fang                 7     6    29    55
 Cao Hong                80    81    40    24
 Cao Mao                 61    69    56    76
-Cao Pi                  65    70    86    85
-Cao Ren                 86    88    62    49
+Cao Pi                  65    70    86    85 Wei
+Cao Ren                 86    88    62    49 Wei
 Cao Shuang              35    28    31    72
 Cao Xi                  18    24    48    40
 Cao Xing                58    71    37    29
@@ -64,8 +64,8 @@ Deng Mao                68    75    37    19
 Deng Xian               67    72    49    38
 Deng Zhi                73    46    74    86
 Deng Zhong              74    86    68    47
-Dian Man                55    72    36    27
-Dian Wei                68    93    31    29
+Dian Man                55    72    36    27 
+Dian Wei                68    93    31    29 Wei
 Ding Feng               80    83    75    40
 Ding Feng               67    72    51    38
 Ding Yuan               71    74    45    46
@@ -120,7 +120,7 @@ Guan Suo                71    81    57    48
 Guan Tong               68    55    62    63
 Guan Xing               76    86    60    50
 Guan Yi                 44    64    46    51
-Guan Yu                 93    97    77    64
+Guan Yu                 93    97    77    64 Shu
 Gui Gu                  67    74    40     7
 Guo Huai                84    77    82    73
 Guo Jia                 58    10    99    82
@@ -201,7 +201,7 @@ Liang Xiang             66    68    22    26
 Liao Hua                75    76    67    47
 Ling Cao                76    79    40    40
 Ling Tong               78    87    52    39
-Liu Bei                 75    74    73    78
+Liu Bei                 75    74    73    78 Shu
 Liu Biao                46    28    68    80
 Liu Chen                62    65    70    72
 Liu Cong                22    22    66    61
@@ -222,7 +222,7 @@ Liu Yao                 54    67    30    71
 Liu Ye                  36    68    88    72
 Liu Yu                  56    44    70    91
 Liu Zhang                3     3     5    33
-Lu Bu                   94   100    25    16
+Lu Bu                   94   100    25    16 Other
 Lu Fan                  74    61    73    74
 Lu Jing                 72    65    76    75
 Lu Ju                   73    56    71    65
@@ -241,7 +241,7 @@ Lun Zhi                 51    42    70    63
 Luo Xian                80    70    75    70
 
 ~M~
-Ma Chao                 91    97    46    44
+Ma Chao                 91    97    46    44 Shu
 Ma Dai                  76    84    56    52
 Ma Liang                39    32    85    91
 Ma Su                   64    65    89    81
@@ -255,7 +255,7 @@ Man Chong               79    53    80    85
 Mangya Cheng            62    78     6     5
 Mao Jie                 60    41    62    84
 Meng Da                 72    74    77    64
-Meng Huo                75    82    40    39
+Meng Huo                75    82    40    39 Other
 Meng You                63    62    13    15
 Mi Fang                 55    56    31    25
 Mi Zhu                  32    39    72    84
@@ -296,12 +296,12 @@ Sima Zhou               63    45    55    62
 Song Xian               68    76    41    36
 Su You                  56    65    48    37
 Sun Ba                  34    64    61    65
-Sun Ce                  95    92    75    72
+Sun Ce                  95    92    75    72 Wu
 Sun Deng                67    47    78    88
 Sun Hao                 10    31    40    10
 Sun He                  32    44    66    72
 Sun Huan                85    72    78    74
-Sun Jian                96    91    77    78
+Sun Jian                96    91    77    78 Wu
 Sun Jing                62    42    70    72
 Sun Jun                 58    69    74    19
 Sun Kuang               42    51    44    64
@@ -309,7 +309,7 @@ Sun Lang                39    48    33    38
 Sun Liang               24    11    71    76
 Sun Lin                 19    40    59     9
 Sun Qian                33    32    71    86
-Sun Quan                73    67    83    89
+Sun Quan                73    67    83    89 Wu
 Sun Shang Xiang         77    84    72    71
 Sun Shao                80    78    76    65
 Sun Shu                 22    24    38    61
@@ -323,7 +323,7 @@ Sun Zhen                71    74    44    43
 Sun Zhong               66    71    49     9
 
 ~T~
-Taishi Ci               79    92    62    56
+Taishi Ci               79    92    62    56 Wu
 Taishi Xiang            59    69    43    63
 Tao Qian                47    37    68    57
 Tian Chou               68    66    74    78
@@ -357,7 +357,7 @@ Wu Yi                   80    70    72    71
 ~X~
 Xiahou Ba               79    85    77    46
 Xiahou Di               64    73    37    44
-Xiahou Dun              90    92    64    76
+Xiahou Dun              90    92    64    76 Wei
 Xiahou En               61    69    61    59
 Xiahou He               54    51    72    75
 Xiahou Hui              57    49    74    72
@@ -411,7 +411,7 @@ Yu Jin                  82    76    72    57
 Yu She                  68    79    31    29
 Yu Si                   72    38    80    72
 Yuan Shang              62    73    44    34
-Yuan Shao               80    68    75    77
+Yuan Shao               80    68    75    77 Other
 Yuan Shu                49    66    71    15
 Yuan Tan                58    70    27    34
 Yuan Xi                 65    55    64    72
@@ -428,13 +428,13 @@ Ze Rong                 65    71    38    11
 Zhang Bao(Shu)          76    87    67    49
 Zhang Bao(YS)           83    70    86    72
 Zhang Cheng             76    72    74    77
-Zhang Fei               83    98    35    22
+Zhang Fei               83    98    35    22 Shu
 Zhang He                89    90    74    53
 Zhang Heng              67    68    26    31
 Zhang Hong              31    11    89    97
 Zhang Hu                72    74    48    44
 Zhang Ji                65    70    48    56
-Zhang Jue(Jiao)         92    26    87    82
+Zhang Jue(Jiao)         92    26    87    82 Other
 Zhang Kai               36    63    15     1
 Zhang Liang             81    82    68    49
 Zhang Liao              94    90    83    72
@@ -460,26 +460,26 @@ Zhao Fan                18    20    35    61
 Zhao Guang              68    72    53    48
 Zhao Hong               59    73    35    26
 Zhao Tong               65    68    66    59
-Zhao Yun                88    96    78    72
+Zhao Yun                88    96    78    72 Shu
 Zhen Chong              21    13    75    83
 Zhong Hui               77    42    91    80
 Zhong Yao               60    15    77    95
 Zhong Yu                26    13    70    74
 Zhou Cang               66    83    56    39
-Zhou Tai                81    93    48    33
+Zhou Tai                81    93    48    33 Wu
 Zhou Yu                 98    71    97    91
 Zhou Xin                68    69    71    57
 Zhu Bao                 65    71    18    26
 Zhu Huan                87    84    81    59
 Zhu Jun                 81    40    72    77
 Zhu Ran                 82    70    65    62
-Zhu Rong                68    85    32    30
+Zhu Rong                68    85    32    30 Other
 Zhu Yi                  71    72    68    64
 Zhu Zhi                 70    58    72    74
 Zhuge Jin               74    33    80    93
 Zhuge Jun               28    27    50    65
 Zhuge Ke                61    37    91    79
-Zhuge Liang             92    33   100    98
+Zhuge Liang             92    33   100    98 
 Zhuge Shang             69    72    52    70
 Zhuge Xu                48    41    38    58
 Zhuge Zan               73    65    74    78
